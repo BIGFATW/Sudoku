@@ -10,7 +10,7 @@ bool ended;
 int restart = 0;
 #define INN(hy,hx) (x==hx&&y==hy)
 #define ON_A_LINE(x1,y1,x2,y2) (x1==x2 || y1==y2)
-#define IN_A_BLOCK(x1,y1,x2,y2) (BLOCK(x1,y1)==BLOCK(x2,y2))//(x1/3==x2/3 && y1/3==y2/3)
+#define IN_A_BLOCK(x1,y1,x2,y2) (x1/3==x2/3 && y1/3==y2/3)//(BLOCK(x1,y1)==BLOCK(x2,y2))
 #define RELATED(x1,y1,x2,y2) (ON_A_LINE(x1,y1,x2,y2) || IN_A_BLOCK(x1,y1,x2,y2))
 #define SURED(x,y) (lay[x][y].size()!=1 ? -1 : lay[x][y][0])
 #define REMOVE(x,y,ONE) lay[x][y].erase(find(lay[x][y].begin(), lay[x][y].end(), ONE), find(lay[x][y].begin(), lay[x][y].end(), ONE) + 1);
